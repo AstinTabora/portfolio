@@ -1,34 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Astin Portfolio</title>
-      <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-      <header>
-         <h1 id="name">Astin Tabora</h1>
-         <img src="profile.jpg" alt="Profile Picture" id="profile-img">
-         <p id="course-year">Information Systems - 2nd Year</p>
-         <button id="theme-toggle">Switch Theme</button>
-      </header>
-      <section id="achievements">
-         <h2>Achievements/Certifications</h2>
-         <ul>
-            <li>Achievement 1</li>
-            <li>Achievement 2</li>
-            <li>Achievement 3</li>
-         </ul>
-      </section>
-      <section id="projects">
-         <h2>Previous Projects</h2>
-         <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-         </ul>
-      </section>
-      <script src="script.js"></script>
-   </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astin Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo">Astin Porfolio</div>
+        <nav>
+         <!--
+            <a href="#projects">WORK</a>
+            <a href="#contact">CONTACT</a>
+            -->
+            <button id="theme-toggle">Light Mode</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <!-- Profile pic -->
+            <div class="profile-container">
+                <img src="Astin_profile.jpg" alt="Astin Tabora" id="profile-img">
+            </div>
+
+            <h1>Hi, I'm <br> <span class="highlight">Astin Tabora</span></h1>
+            <h3> Information Systems - 2nd Year</h3>
+            
+            <a href="#contact" class="cta-button">MY WORK</a>
+        </div>
+
+        <!-- Down Arrow Icon -->
+        <div class="scroll-indicator">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Previous Projects Section -->
+    <section id="projects" class="content-section">
+        <h1 class="section-title">Recent Projects</h1>
+        <div class="video-grid">
+            <!-- Vimeo Placeholder 3 -->
+            <div class="video-wrapper">
+                <iframe src="https://player.vimeo.com/video/1058872365" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+            <!-- Vimeo Placeholder 4 -->
+            <div class="video-wrapper">
+                <iframe src="https://player.vimeo.com/video/1072641783" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+            <!-- Vimeo Placeholder 5 -->
+            <div class="video-wrapper">
+                <iframe src="https://player.vimeo.com/video/996618680" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2024 Astn Visuals (astnvs.com). All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
