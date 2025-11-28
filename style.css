@@ -1,0 +1,226 @@
+/* --- CSS VARIABLES & THEMES --- */
+:root {
+    /* Default Theme (Dark/Image Style) */
+    --bg-color: #1a0b1e; /* Deep purple/black from image */
+    --text-primary: #e0ff4f; /* Lime green from image */
+    --text-secondary: #ffffff;
+    --nav-text: #ffffff;
+    --button-border: #ffffff;
+    --button-hover-bg: #e0ff4f;
+    --button-hover-text: #1a0b1e;
+    --profile-border: #e0ff4f;
+}
+
+/* Light Theme Class */
+body.light-mode {
+    --bg-color: #f4f4f4;
+    --text-primary: #4d0063;
+    --text-secondary: #333333;
+    --nav-text: #1a0b1e;
+    --button-border: #1a0b1e;
+    --button-hover-bg: #1a0b1e;
+    --button-hover-text: #ffffff;
+    --profile-border: #4d0063;
+}
+
+/* --- GLOBAL STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-secondary);
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif; /* Matching the font in image */
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Theme Button Styling */
+#theme-toggle {
+    background: transparent;
+    border: 1px solid var(--button-border);
+    color: var(--nav-text);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: var(--nav-text);
+    color: var(--bg-color);
+}
+
+/* --- HERO SECTION --- */
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.profile-container {
+    margin-bottom: 20px;
+}
+
+#profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--profile-border);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    font-weight: 800;
+}
+
+
+h3 {
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 80px;
+    color: var(whitesmoke);
+    font-weight: 300;
+}
+
+.cta-button {
+    text-decoration: none;
+    color: var(--text-secondary);
+    border: 1px solid var(--button-border);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--button-hover-bg);
+    color: var(--button-hover-text);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    color: var(--text-secondary);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+/* --- Projects --- */
+.content-section {
+    padding: 10px 50px;
+	padding-bottom: 1000px
+    max-width: 1200px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--text-secondary);
+    font-family: 'Inter', serif;
+    border-bottom: 1px solid var(--text-primary);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Responsive Vimeo Embed wrapper */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+	padding-top: 200px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .content-section {
+        padding: 50px 20px;
+    }
+}
